@@ -5,35 +5,35 @@ namespace Lab_5._1_RPG
 {
     class GameCharacter // base calss to hold info every playable class will need. Intelligence, Strength, and Name
     {
-        public string name { get; set; }
-        public int strength { get; set; }
-        public int intelligence { get; set; }
+        public string Name { get; set; }
+        public int Strength { get; set; }
+        public int Intelligence { get; set; }
 
         public GameCharacter(string theName, int theStrength, int theIntelligence)
         {
-            name = theName;
-            strength = theStrength;
-            intelligence = theIntelligence;
+            Name = theName;
+            Strength = theStrength;
+            Intelligence = theIntelligence;
         }
 
         public virtual void Play()
         {
-            Console.WriteLine($"{name} (Intelligence {intelligence}, Strength {strength})"); // Displays base stats for all classes created.         
+            Console.WriteLine($"{Name} (Intelligence {Intelligence}, Strength {Strength})"); // Displays base stats for all classes created.         
         }
     }
 
     class Warrior : GameCharacter // Warrior Class, has Base Stats, in addiition to a weapon of choice.
     {
-        public string weapon { get; set; }
+        public string Weapon { get; set; }
 
         public Warrior(string theName, int theStrength, int theIntelligence, string theWeapon) : base(theName, theStrength, theIntelligence)
         {
-            weapon = theWeapon;
+            Weapon = theWeapon;
         }
         public override void Play()
         {
             base.Play();
-            Console.WriteLine($"{name} uses a {weapon}, as their weapon of choice."); // After adding the base stats message, adds a weapon of choice for the hero.
+            Console.WriteLine($"{Name} uses a {Weapon}, as their weapon of choice."); // After adding the base stats message, adds a weapon of choice for the hero.
             Console.WriteLine();
         }
     }
@@ -48,7 +48,7 @@ namespace Lab_5._1_RPG
         public override void Play()
         {
             base.Play();
-            Console.WriteLine($"In addition on their base stats {name}, has a pool of {magicalEnergy} magical energy."); // base message + amount of magical energy
+            Console.WriteLine($"In addition on their base stats {Name}, has a pool of {magicalEnergy} magical energy."); // base message + amount of magical energy
             
         }
     }
@@ -56,15 +56,15 @@ namespace Lab_5._1_RPG
 
     class Wizard : MagicUsingCharacter // Defines Wizard Class, which takes all of the Stats the Magic Using Class has, in addition to a number of Magical Spells.
     {
-        public int spellNumber { get; set; }
+        public int SpellNumber { get; set; }
         public Wizard(string theName, int theStrength, int theIntelligence, int theMagicalEnergy, int theSpellNumber) : base(theName, theStrength, theIntelligence, theMagicalEnergy)
         {
-            spellNumber = theSpellNumber;
+            SpellNumber = theSpellNumber;
         }
         public override void Play()
         {
             base.Play();
-            Console.WriteLine($"{name} is also able to cast {spellNumber} spells."); // base magic user message with stats and energy, in addition to spells known.
+            Console.WriteLine($"{Name} is also able to cast {SpellNumber} spells."); // base magic user message with stats and energy, in addition to spells known.
             Console.WriteLine();
         }
     }
