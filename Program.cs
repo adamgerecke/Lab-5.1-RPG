@@ -82,7 +82,7 @@ namespace Lab_5._1_RPG
             character.Add(new Warrior("Warin", 18, 9, "Battle Axe"));    //Name|Strength|Intelligence|Weapon of Choice
             character.Add(new Warrior("Oxnar", 20, 6, "Flail"));
             character.Add(new Warrior("Kong", 25, 12, "Great Sword"));
-            character.Add(new Warrior("Sigismund", 16, 12, "Battle Staff"));
+            character.Add(new Warrior("Wiggin", 16, 12, "Battle Staff"));
             character.Add(new Warrior("Warden", 20, 9, "Glaive"));
             character.Add(new Warrior("La Crox", 16, 14, "Tribuchet"));
 
